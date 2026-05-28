@@ -1,35 +1,26 @@
-# Automated Project Governance & Retention Notification System
+# Office Workflow Automation: Automated Email Notification System
 
-## Overview
-An event-driven automation framework engineered within the Google Workspace environment using Google Apps Script and Gmail API. The system monitors database mutations via installable spreadsheet triggers, automatically validating project control parameters, and compiling dynamic HTML corporate alerts for critical vendor retention milestones.
+A lightweight Google Apps Script built during my time at PT. Bobobox Aset Manajemen to automate tracking and communication workflows[cite: 1].
 
-## The Problem
-Tracking project retention periods manually in spreadsheets presents severe operational and compliance risks in large-scale civil project execution:
-* **Human Error:** Forgetting to review milestone columns leads to missed retention billing periods and administrative friction.
-* **Operational Inefficiency:** Manually copy-pasting data array values from sheets into individual emails for third-party contractors consumes hours of document control time.
-* **Data Incompleteness:** Sending communication based on partially completed data rows causes misinformation across stakeholders.
+## 🔒 Data Privacy Note
+* **Fictional Data Only:** To respect company confidentiality, all data, names, emails, and dates shown in the repository files, code samples, and screenshots are entirely **fictional placeholders**[cite: 1]. 
+* No real internal production data or sensitive company information from PT. Bobobox Aset Manajemen is used or disclosed anywhere in this repository[cite: 1].
 
-## Technical Solution & Architecture
-The codebase functions as an automated data validation and communication engine, eliminating manual human intervention post-data entry.
+## 🤖 Development Note
+* **AI-Assisted Engineering:** This script was engineered by leveraging Generative AI tools to write, optimize, and debug the underlying JavaScript logic.
+* My role focused on **System Architecture & Prompt Engineering**: defining the business logic, mapping data triggers, debugging execution errors, and ensuring the final script integrated seamlessly with the required operational workflows.
 
-* **Installable Event-Trigger Architecture:** Deployed via an installable `From spreadsheet - On edit` trigger. The engine optimizes execution quotas by checking changes globally, immediately returning early if edits occur outside of the operational boundary (**Column M / Due Date Retention**).
-* **Automated Data Integrity Mapping:** Implements a strict validation loop using a predefined index coordinate matrix (`mandatoryIndexes`). If any foundational data component (Vendor, PO, Scope, or Recipient) is missing or corrupted, execution is safely halted.
-* **Type-Safe Date Engine:** Evaluates spreadsheet objects explicitly to verify `Date` type inheritances (`instanceof Date`) for the retention boundaries, computing exact contractual deadlines (e.g., *Due Date + 6 Months*) programmatically.
-* **Dynamic HTML Rendering & Delivery:** Parses spreadsheet string arrays into clean, inline-styled corporate HTML tables, explicitly highlighting deadline properties (Blue/Red formatting) for high-visibility vendor broadcasting.
-* **Two-Way Execution Status Logging:** Features a built-in state machine that tracks execution health and writes immediate feedback directly into the spreadsheet row database (Column S):
-  * **On Success:** Appends a precise, localized execution timestamp (`dd-MMM-yyyy HH:mm:ss`) to verify delivery.
-  * **On Failure:** Catches errors gracefully, appends a clear error diagnostic string (`FAILED: [Error Message]`) into the row status field, and dispatches a high-priority administrative notification to the platform engineer.
+## What This Project Does
+This script bridges standard data entry with direct, automated email notifications via the Gmail API[cite: 1]. 
+* **Automatic Calculations:** The spreadsheet utilizes native formulas to automatically calculate critical project deadlines based on user input[cite: 1].
+* **Smart Email Triggers:** The script monitors the sheet. The exact moment a data row is fully completed, the script triggers a formatted email update to the team[cite: 1].
+* **Delivery Status Logging:** Once the email sends successfully, the script automatically writes a live completion timestamp back into the spreadsheet row for real-time tracking[cite: 1].
 
-### Technical Workflow
-The system actively watches data mutations and handles errors gracefully through a structured pipeline:
+## Tools Used
+* Google Apps Script (JavaScript)
+* Google Sheets / Excel Formulas
+* Gmail API Integration
+* Generative AI (Prompt Engineering & Debugging)
 
-### System Verification Proofs
-
-**1. Automated Production-Ready Output (Dynamic Email Engine):**
-![Automated Email Notification](email-output.png)
-
-## Business Impact
-* **0% Missed Deadlines:** Critical project control dates are parsed and broadcasted to vendors instantly upon data validation, closing the financial retention loop.
-* **100% Administrative Efficiency Gain:** Mitigates email compilation time from ~15 minutes per project to zero seconds of human intervention post-entry.
-* **Unalterable Audit Trail:** Eliminates debate over communication timelines by preserving persistent status and date/time records for every single vendor row transaction.
-* **Standardized Corporate Governance:** Secures unalterable structural templates, preventing syntax and communication inconsistencies during third-party contractor closeouts.
+## Why It Was Built
+To eliminate the manual overhead of sending individual reminders to stakeholders. By automating the notification process, this system ensures that every relevant stakeholder is immediately made aware of critical task timelines, keeping project schedules aligned and preventing execution delays.
